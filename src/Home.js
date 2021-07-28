@@ -18,14 +18,7 @@ export default class Home extends React.Component {
         
         switch (topic.toLowerCase()) {
             case "web development":
-                return [
-                    'Django',
-                     'Ruby on Rails',
-                      'PHP',
-                       'Node.js', 
-                '.NET Framework'
-            ]   
-                }     
+                return ['Django','Ruby on Rails','PHP','Node.js','.NET Framework']                 
                
             case "machine learning":
                 return ['Data Science', 'Deep Learning', 'Natural Learning Process']
