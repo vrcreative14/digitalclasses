@@ -19,7 +19,7 @@ export default class Home extends React.Component {
         switch (topic.toLowerCase()) {
             case "web development":
                 return [
-                    'Django':"https://storage.googleapis.com/vicinity-solutions.appspot.com/development-4536630_640.png",
+                    'Django',
                      'Ruby on Rails',
                       'PHP',
                        'Node.js', 
