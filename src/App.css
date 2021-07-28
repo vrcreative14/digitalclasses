@@ -7,27 +7,142 @@
   pointer-events: none;
 }
 
+.pageHeader{
+  background-image: linear-gradient(to top right, rgb(127, 179, 213,1), rgb(52, 73, 94, 0.9)) !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+.dropbtn {
+  background-color: transparent! Important;
+  color: rgb(0, 0, 0)!Important;
+  padding: 16px;
+  font-size: 17px;
+  border: none;
+  font-family: 'barlow';
+  font-style: bold;
+}
+
+.dropdown:hover .dropdown-content{
+  display: inline;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.card{
+  height: auto;
+  width: 300px;
+  margin: 5px 15px 25px 10px;  
+  padding: 5px 5px 5px 5px;
+  border-radius: 1px;
+  border: 0.1px black solid;
+}
+
+.card-container{
+  display: flex;
+  justify-content: space-evenly;
+  /* align-content: space-between; */
+  flex-wrap: wrap;  
+}
+.card-image{
+  width: 250px;
+  height: 250px;
+}
+.animated-card{
+  animation-duration: 3s;  
+  animation-name: slidein;
+  animation-direction:normal;
+}
+.card-container p{
+  font-family:'Times New Roman', Times, serif;
+  line-height: 30px;
+  font-size: 19px;  
+  text-align: left;
+  padding: 10px 10px 10px 10px;
+}
+@keyframes slidein {
+  from {
+    margin-left:-100%;
+    width:300%;
+  }
+
+  to {
+    margin-left:0%;
+    width:100%;
+  }
+}
+.animated-card-right{
+  animation-duration: 3s;
+  animation-name: slideinright;
+}
+@keyframes slideinright {
+  from {
+    margin-right:-100%;
+    width:300%;
+  }
+
+  to {
+    margin-right:0%;
+    width:100%;
+  }
+  
+}
+.block{
+  animation-duration: 3s;
+  animation-iteration-count: 3;
+  animation-name: slidein;
+  animation-direction: alternate;
+}
+
+.content div.card:hover{
+  opacity: 40%;
+  transition: 5s;  
+}
+.cardbutton{
+  display: none;
+}
+.content div.card:hover .cardbutton{
+  display: inline;
+}
 .App-header {
-  background-color: #282c34;
+  background-color: whitesmoke;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
   color: #61dafb;
 }
-
+.content{
+  color: orange;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
