@@ -73,6 +73,7 @@
   animation-duration: 3s;  
   animation-name: slidein;
   animation-direction:normal;
+  display: flex;
 }
 .card-container p{
   font-family:'Times New Roman', Times, serif;
@@ -80,6 +81,7 @@
   font-size: 19px;  
   text-align: left;
   padding: 10px 10px 10px 10px;
+  flex-wrap: wrap;
 }
 @keyframes slidein {
   from {

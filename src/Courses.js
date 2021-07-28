@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from './Card.js';
 
+const baseUrl = 'https://storage.googleapis.com/vicinity-solutions.appspot.com/'
+
 class Courses extends React.Component{
 
     constructor(props){
@@ -11,15 +13,31 @@ class Courses extends React.Component{
     }
     
     render(){
-    debugger;
-   
+    debugger;   
+    let content = ''
+    
+    // for(var key in dict){
+    //     debugger
+    //     content += `<Card name=${key} image_url = ${dict[key]} />`
+    //     console.log(dict[key])  
+    //     console.log(key)
+    // }
+    let dict = this.props.courses
+    let url = ""
     return(
+        
         <div className="card-container" image_url="">
        {
-       this.props.courses.map( (i,index)  => (
-                 <Card name={i} key={index} />
-         )
-        )
+          Object.keys(dict).map((key, index) => (
+              url=baseUrl+dict[key],console.log(url),
+             <Card name={key} image_url={url}></Card>
+          ))
+    //    this.props.courses.map( (i,index)  => (
+                    
+    //              <Card name={i} key={index} />
+    //      )
+    //     )
+    
        }
         </div>
     );
